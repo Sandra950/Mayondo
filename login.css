@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Page Background */
+
+/* 🌄 General page styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("assets/pexels-pixabay-276528.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌀 Animated gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #555 !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Overlay for centering content */
+.overlay {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Form Container */
+.signup-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+.signup-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Form Labels */
+.form-label {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input Fields */
+.form-control {
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+.btn-custom,
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover,
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6610f2, #007bff);
+  transform: scale(1.02);
+}
+
+/* Footer Text */
+.form-text {
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-text a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-text a:hover {
+  text-decoration: underline;
+}
+
+/* Error & Message */
+#message {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #dc3545; /* red for errors */
+  text-align: center;
+}

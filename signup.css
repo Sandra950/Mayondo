@@ -1,0 +1,166 @@
+/* 🌄 General page styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("assets/pexels-pixabay-276528.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌀 Animated gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🧭 Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Inline error messages ("terror of wrong") */
+.text-danger.small {
+  font-size: 13px;
+  font-weight: 600;
+  color: #dc3545;
+  margin-top: 3px;
+  transition: 0.3s ease;
+}
+
+/* When errors show, animate the border */
+input.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 6px rgba(220, 53, 69, 0.6);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #0d0581 !important;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  color: #0d0581 !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #6c63ff !important;
+  text-shadow: 0 0 8px rgba(108, 99, 255, 0.6);
+}
+
+/* 🎁 Signup form container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-6 {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease;
+}
+
+.col-md-6:hover {
+  transform: translateY(-5px);
+}
+
+/* ✨ Title */
+h2 {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 🧩 Labels and Inputs */
+.form-label {
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-control:focus {
+  border-color: #b197fc;
+  box-shadow: 0 0 12px rgba(177, 151, 252, 0.7);
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* 🌟 Button */
+.btn-primary {
+  background: linear-gradient(135deg, #0d0581, #6c63ff);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6c63ff, #b197fc);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.7);
+}
+
+/* 🚨 Error / Message */
+#message {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* 🕊️ Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .col-md-6 {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
